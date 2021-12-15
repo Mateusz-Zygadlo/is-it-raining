@@ -1,12 +1,10 @@
 import React from 'react'
 import { VideoBackground, VideoTitleBox } from '../components'
-import { useTranslations } from '../hooks'
 import { COMPOSITION_CONFIG } from '../config'
 import { Cloud } from '../components'
 
 export const Intro: React.FC = () => {
   const { VIDEO } = COMPOSITION_CONFIG
-  const T = useTranslations()
 
   return(
     <VideoBackground backgroundColor={VIDEO.BACKGROUND_COLOR}>
