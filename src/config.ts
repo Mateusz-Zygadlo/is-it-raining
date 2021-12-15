@@ -33,7 +33,7 @@ export const COMPOSITION_CONFIG = {
     },
     COLOR: {
       REGULAR: '#ffffff',
-      ACCENT: '#F0F8EA'
+      ACCENT: '#FF4C4C'
     }
   }
 }
