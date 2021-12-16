@@ -14,8 +14,8 @@ export const pl_PL = {
     cloudy: 'Pochmurno i nie pada',
   },
   outro: {
-    question: 'Chcesz zobaczyć więcej projektów wykonanych przeze mnie',
+    question: 'Chcesz zobaczyć więcej\nprojektów wykonanych przeze mnie',
     github: 'Wejdź na mojego Githuba',
-    note: 'Video dostało wygenerowane automatycznie',
+    note: 'Video zostało\nwygenerowane automatycznie',
   }
 }

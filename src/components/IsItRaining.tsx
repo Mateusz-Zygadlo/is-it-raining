@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { Sequence, useVideoConfig } from "remotion"
 import { WeatherState } from "../common";
-import { Intro, Result } from "../sequences";
+import { Intro, Result, Outro } from "../sequences";
 
 export const IsItRaining = () => {
   const { fps } = useVideoConfig();
@@ -24,6 +24,13 @@ export const IsItRaining = () => {
           temperature={-10}
           weatherState={WeatherState.Raining}
         />
+      </Sequence>
+      <Sequence
+        from={7 * fps}
+        durationInFrames={3 * fps}
+        name="Outro"
+      >
+        <Outro />
       </Sequence>
     </Fragment>
   )

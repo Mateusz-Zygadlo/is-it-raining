@@ -15,14 +15,14 @@ export const VIDEO_CONFIG = {
 
 export const APP_CONFIG = {
   CITY: 'Środa Śląska',
-  PERSONAL_PAGE_URL: '',
+  PERSONAL_PAGE_URL: 'https://github.com/Mateusz-Zygadlo',
   WEATHER_API_KEY: '',
 }
 
 export const COMPOSITION_CONFIG = {
   VIDEO: {
     BACKGROUND_COLOR: '#e3d7b1',
-    OUTRO_BACKGROUND_COLOR: '#57450c',
+    OUTRO_BACKGROUND_COLOR: '#0E0E0E',
   },
   TEXT: {
     FONT_SIZE: {
