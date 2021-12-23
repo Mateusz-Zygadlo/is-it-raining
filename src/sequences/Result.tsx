@@ -1,6 +1,15 @@
 import React from "react"
 import { WeatherState } from "../common"
-import { Typography, VideoBackground, WeatherBaseImage, Cloud, RainCloud } from "../components"
+import { 
+  Typography, 
+  VideoBackground, 
+  WeatherBaseImage, 
+  Cloud, 
+  RainCloud,
+  SnowCloud, 
+  Sun,
+  SunBehindTheCloud 
+} from "../components"
 import { COMPOSITION_CONFIG } from '../config'
 import { useTranslations, useWeatherStateName } from '../hooks'
 import styled from 'styled-components'
@@ -28,54 +37,53 @@ export const Result: React.FC<ResultProps> = ({ weatherState, temperature }) => 
           </Typography.Heading>
         </TextContainer>
       </Container>
-      <RainCloud
+      <SnowCloud
         scale={0.7}
         translateX={-340}
         translateY={-760}
       />
-      <RainCloud
+      <SnowCloud
           scale={1.3}
           translateX={350}
           translateY={-960}
       />
-      <RainCloud
-          scale={0.6}
-          translateX={50}
-          translateY={-660}
+      <Sun 
+        translateX={0}
+        translateY={-600}
       />
-      <RainCloud
+      <SnowCloud
           scale={0.7}
           rotate={160}
           translateX={460}
           translateY={-560}
       />
-      <RainCloud
+      <SnowCloud
           scale={0.45}
           translateX={-430}
           translateY={-470}
       />
-      <RainCloud
+      <SnowCloud
           scale={0.45}
           translateX={-350}
           translateY={-120}
       />
-      <RainCloud
+      <SnowCloud
           scale={0.7}
           translateX={570}
           translateY={20}
       />
-      <RainCloud
+      <SnowCloud
           scale={1.4}
           rotate={-10}
           translateX={-520}
           translateY={240}
       />
-      <RainCloud
+      <SnowCloud
           scale={1.3}
           translateX={420}
           translateY={680}
       />
-      <RainCloud
+      <SnowCloud
           scale={1.3}
           translateX={-320}
           translateY={880}

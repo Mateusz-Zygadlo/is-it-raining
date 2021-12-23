@@ -1,28 +1,28 @@
-import React, { Fragment } from 'react';
-import { Cloud } from './Cloud'
-import { Rain } from './Rain'
+import React from 'react'
 import { Loop } from 'remotion'
-import { Thunder } from '../components';
+import styled from 'styled-components'
+import { 
+  Cloud, 
+  Snow 
+} from '../components'  
 
-type RainCloudProps = {
+type SnowCloudProps = {
   translateX?: number,
   translateY?: number,
   scale?: number,
   rotate?: number,
-  withThunder?: boolean,
 }
 
-export const RainCloud: React.FC<RainCloudProps> = ({
+export const SnowCloud: React.FC<SnowCloudProps> = ({
   translateX = 0,
   translateY = 0,
   scale = 1,
   rotate = 0,
-  withThunder,
 }) => {
-  const rainPosition = [
+  const snowPosition = [
     {
-        bottom: -60,
-        left: 60,
+      bottom: -60,
+      left: 60,
     },
     {
         bottom: -70,
@@ -54,7 +54,6 @@ export const RainCloud: React.FC<RainCloudProps> = ({
     }
   ]
 
-
   return(
     <Cloud
       translateX={translateX}
@@ -63,43 +62,27 @@ export const RainCloud: React.FC<RainCloudProps> = ({
       rotate={rotate}
     >
       <Loop
-        durationInFrames={30}
+        durationInFrames={45}
         times={Infinity}
       >
-        {rainPosition.map((position, index) => (
-          <Fragment>
-            <Rain
+        {snowPosition.map((position, index) => (
+          <>
+            <Snow
               key={`${index}-1`}
               bottom={position.bottom}
               left={position.left}
               opacity={1}
             />
-            <Rain
+            <Snow
               key={`${index}-2`}
               bottom={position.bottom - 30}
               left={position.left - 70}
               opacity={0.7}
               slower
             />
-          </Fragment>
+          </>
         ))}
       </Loop>
-      {withThunder && (
-        <Loop
-          durationInFrames={60}
-          times={Infinity}
-        >
-          <Thunder
-            bottom={-150}
-            left={200}
-          />
-          <Thunder 
-            bottom={-120}
-            left={80}
-            scale={0.7}
-          />
-        </Loop>
-      )}
     </Cloud>
   )
 }
