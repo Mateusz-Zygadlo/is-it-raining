@@ -16,6 +16,7 @@ export { ChristmasTree } from './ChristmasTree'
 export { Sunbeds } from './Sunbeds'
 export { Weather } from './Weather'
 export { Codemask } from './Codemask'
+export { fetchWeatherDataForCity } from './actions'
 export {
   Typography,  
 }
