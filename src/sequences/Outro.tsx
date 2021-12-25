@@ -2,23 +2,35 @@ import React from 'react'
 import styled from 'styled-components'
 import { 
   VideoBackground,
-  Typography
+  Typography,
+  Codemask,
  } from '../components'
  import { COMPOSITION_CONFIG, APP_CONFIG } from '../config'
  import { Images } from '../assets'
- import { Img } from 'remotion'
+ import { Img, useCurrentFrame, interpolate} from 'remotion'
  import { useTranslations } from '../hooks'
 
 export const Outro: React.FC = () => {
   const { VIDEO } = COMPOSITION_CONFIG
   const { PERSONAL_PAGE_URL } = APP_CONFIG
   const T = useTranslations()
+  const frame = useCurrentFrame()
+  const animatedBorderOpacity = interpolate(
+    frame,
+    [0, 15],
+    [0, 1]
+  )
+  const animatedContentOpacity = interpolate(
+    frame,
+    [0, 15, 30],
+    [0, 0, 1]
+  )
   
   return(
     <VideoBackground backgroundColor={VIDEO.OUTRO_BACKGROUND_COLOR}>
-      <Border>
-        <Container>
-          <Codemask src={Images.Codemask} />
+      <Border style={{ opacity: animatedBorderOpacity }}>
+        <Container style={{ opacity: animatedContentOpacity }}>
+          <Codemask />
           <Section>
             <Typography.Regular>
               {T.outro.question}
@@ -53,11 +65,6 @@ const Border = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
-
-const Codemask = styled(Img)`
-  width: 324px;
-  height: 251px;
 `
 
 const Section = styled.div`
