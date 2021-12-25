@@ -11,6 +11,10 @@ export { Snow } from './Snow'
 export { SnowCloud } from './SnowCloud'
 export { Sun } from './Sun'
 export { SunBehindTheCloud } from './SunBehindTheCloud'
+export { Umbrella } from './Umbrella'
+export { ChristmasTree } from './ChristmasTree'
+export { Sunbeds } from './Sunbeds'
+export { Weather } from './Weather'
 export {
   Typography,  
 }

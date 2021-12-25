@@ -3,7 +3,7 @@ import { Sequence, useVideoConfig } from "remotion"
 import { WeatherState } from "../common";
 import { Intro, Result, Outro } from "../sequences";
 
-export const IsItRaining = () => {
+export const IsItRaining: React.FC= () => {
   const { fps } = useVideoConfig();
 
   return(
@@ -21,8 +21,8 @@ export const IsItRaining = () => {
         name="Result"
       >
         <Result 
-          temperature={10}
-          weatherState={WeatherState.Thunderstorm}
+          temperature={20}
+          weatherState={WeatherState.Sunny}
         />
       </Sequence>
       <Sequence
