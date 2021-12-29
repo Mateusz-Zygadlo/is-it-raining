@@ -7,7 +7,9 @@ export const fetchWeatherDataForCity = async (city: string) => {
     .concat(`&appid=${APP_CONFIG.WEATHER_API_KEY}`)
     .concat(`&units=metric`)
   
-  const {weatherState, temperature} = await fetch(url)
+  const { weatherState, temperature } = await fetch(url, {
+    method: 'GET'
+  })
     .then((res) => res.json())
     .then((data) => toWeatherModel(data))
     .catch(() => {
