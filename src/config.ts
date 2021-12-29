@@ -14,7 +14,7 @@ export const VIDEO_CONFIG = {
 }
 
 export const APP_CONFIG = {
-  CITY: 'Wroclaw',
+  CITY: 'wroclaw',
   PERSONAL_PAGE_URL: 'https://github.com/Mateusz-Zygadlo',
   WEATHER_API_KEY: process.env.OPEN_WEATHER_API_KEY,
 }
