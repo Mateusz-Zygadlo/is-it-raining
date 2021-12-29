@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 const runScript = async () => {
-  const tiktokUrl = 'https://ads.tiktok.com/business/creativecenter/music/pc/en'
+  const tiktokUrl = 'https://ads.tiktok.com/business/creativecenter/music/pad/en?from=100'
 
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
